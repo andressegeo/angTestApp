@@ -1,0 +1,18 @@
+/* mat-toolbar{
+    text-align: center;
+} */
+mat-card{
+    text-align: center; 
+}
+
+.but{
+    display: inline-block;
+}
+
+#froalaEditor{
+    overflow: auto;
+}
+
+#rec{
+    display: inline-block;
+}

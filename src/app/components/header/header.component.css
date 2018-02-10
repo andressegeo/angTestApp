@@ -1,0 +1,20 @@
+a:link 
+{ 
+text-decoration:none; 
+} 
+
+#myHeaderToolbar {
+    background:rgb(9, 112, 197);
+}
+
+#logo{
+    margin: 5px 0 -20px 0; 
+    text-align: center;
+    background-color: #fff;
+}
+
+#head{
+    display: flex;
+    align-items: center;
+}
+.mat-toolbar[_ngcontent-c1]{height:100%;padding:0}.mat-toolbar[_ngcontent-c1], a[_ngcontent-c1]{display:-webkit-box;display:-ms-flexbox;display:flex}a[_ngcontent-c1]{width:33.33333%;padding:20px 0 10px 0;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:16px}a[_ngcontent-c1]   .mat-icon[_ngcontent-c1]{margin-right:5px}a[_ngcontent-c1], a[_ngcontent-c1]   .mat-icon[_ngcontent-c1]{color:inherit}.nav-active[_ngcontent-c1]{border-bottom-width:3px;border-bottom-style:solid}
