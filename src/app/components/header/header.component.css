@@ -4,7 +4,8 @@ text-decoration:none;
 } 
 
 #myHeaderToolbar {
-    background:rgb(9, 112, 197);
+    font-size: 16px;
+    /* background:rgb(9, 112, 197); */
 }
 
 #logo{

@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MatSnackBar } from '@angular/material';
+import { DataFormService } from '../../app/service/data-form.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-formulaire',
   templateUrl: './formulaire.component.html',
-  styleUrls: ['./formulaire.component.css']
+  styleUrls: ['./formulaire.component.css'],
+  // providers: [ROUTER_PROVIDERS]
 })
 
 
@@ -26,8 +29,10 @@ export class FormulaireComponent implements OnInit {
     recurrence:""
   }
   
-  constructor() { }
-
+  // constructor(public snackBar: MatSnackBar) { }
+  constructor(private dataFormService : DataFormService, private router: Router) { 
+    
+  }  
   ngOnInit() {
   }
 
@@ -40,11 +45,19 @@ export class FormulaireComponent implements OnInit {
   }
 
   // Button who, when all inputs are correct fields, create an specific html template mail
-  validate(){
-    console.log(this.form);
-    return this.form;
+  // validate(){
+  //   console.log(this.form);
+  //   this.snackBar.open('Message send', 'Undo');
+  //   }
+    // return this.form;
+
+    validate(){
+      // console.log(this.form);
+      this.dataFormService.addData(this.form);
+      this.router.navigate(['./history']);
+    }
   }
 
 
-}
+
 

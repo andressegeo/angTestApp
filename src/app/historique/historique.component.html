@@ -1,3 +1,32 @@
-<p>
-  historique works!
-</p>
+<div id="test">
+  <mat-card>    
+  <mat-toolbar>
+        <b>Historique</b>
+      </mat-toolbar>
+  </mat-card>
+<ul *ngFor="let dat of dataForms">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>
+          <b>namesgeo</b>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <b>{{dat.date}}</b>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        {{dat.subject}}
+      </mat-card-content>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+          {{dat.reccurence}}
+        </mat-card-content>
+      <mat-card-content>
+        <p [innerHTML]="dat.body">
+            
+        </p>
+      </mat-card-content>
+    </mat-card>
+    </ul>
+    </div>

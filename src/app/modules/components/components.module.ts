@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { MaterialModule } from '../material/material.module';
-import {FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { FormulaireComponent } from '../../formulaire/formulaire.component';
 import { HistoriqueComponent } from '../../historique/historique.component';
 import { ManagerComponent } from '../../manager/manager.component';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import { DataFormService } from '../../service/data-form.service';
 @NgModule({
   imports: [
     CommonModule,
@@ -30,5 +31,8 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
     HistoriqueComponent,
     ManagerComponent
   ], 
+  providers : [
+    DataFormService,
+  ]
 })
 export class ComponentsModule { }
