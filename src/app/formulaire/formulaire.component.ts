@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
   selector: 'app-formulaire',
   templateUrl: './formulaire.component.html',
   styleUrls: ['./formulaire.component.css'],
-  // providers: [ROUTER_PROVIDERS]
 })
 
 
@@ -16,12 +15,14 @@ export class FormulaireComponent implements OnInit {
   private reccuType = [
     "Tous les jours à 9h","Toutes les semaines, le lundi","Tous les 1er du mois","Personaliser"
   ];
+
   private options: Object = { 
-    placeholderText: 'Edit your body content here:',
+    placeholderText: 'Edit your body content here:*',
     charCounterCount: true,
     charCounterMax: 1000,
     theme: "yellow"
   }
+  
   private form = {
     subject : "",
     date : new Date(),
@@ -30,9 +31,7 @@ export class FormulaireComponent implements OnInit {
   }
   
   // constructor(public snackBar: MatSnackBar) { }
-  constructor(private dataFormService : DataFormService, private router: Router) { 
-    
-  }  
+  constructor(private dataFormService : DataFormService, private router: Router) {}  
   ngOnInit() {
   }
 
@@ -44,12 +43,6 @@ export class FormulaireComponent implements OnInit {
     this.form.recurrence = "";
   }
 
-  // Button who, when all inputs are correct fields, create an specific html template mail
-  // validate(){
-  //   console.log(this.form);
-  //   this.snackBar.open('Message send', 'Undo');
-  //   }
-    // return this.form;
 
     validate(){
       // console.log(this.form);

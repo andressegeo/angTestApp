@@ -7,10 +7,12 @@
     bottom: 0;
     text-align: center;
     background: white;
+    margin: -1.5em auto;
+    /* border-top-style: 2px groove; */
 }
 
 mat-card {
-    margin: -1.7em auto;
-    text-align: center;
+    /* height: 100px; */
+   
   }
   

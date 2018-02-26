@@ -8,10 +8,10 @@ mat-card{
 .but{
     display: inline-block;
 }
-/* 
+ 
 #froalaEditor{
     overflow: auto;
-} */
+} 
 
 /* #submitButton{
     background:rgb(9, 112, 197); 
@@ -19,4 +19,8 @@ mat-card{
 
 #rec{
     display: inline-block;
+}
+
+.myInputForm{
+    min-width: 350px;
 }

@@ -1,14 +1,14 @@
 <div class="formField">
-  <form #myForm="ngForm" (ngSubmit)="validate()">
+  <form #myForm="ngForm" (ngSubmit)="validate()" class="myForm">
     <mat-divider></mat-divider>
 
     <mat-card>
       <mat-toolbar>
-          <b>Console d'administration</b>
+          <b>Formulaire </b>
         </mat-toolbar>
         <mat-divider></mat-divider>
-      <mat-form-field>
-        <input matInput placeholder="Subject:"  [(ngModel)] = "form.subject" name="subject" required>
+      <mat-form-field class="myInputForm">
+        <input matInput placeholder="Subject:" [(ngModel)] = "form.subject" name="subject" required>
       </mat-form-field>
         <div id="froalaEditor" [froalaEditor] = 'options' [(ngModel)] = "form.body" name="body" required></div>
         <br>

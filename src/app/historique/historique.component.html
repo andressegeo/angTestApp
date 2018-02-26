@@ -1,32 +1,35 @@
 <div id="test">
   <mat-card>    
   <mat-toolbar>
-        <b>Historique</b>
-      </mat-toolbar>
+        <b>Historique des modifications</b>
+  </mat-toolbar>
   </mat-card>
-<ul *ngFor="let dat of dataForms">
+<mat-card>
+<mat-grid-list cols="4" rowHeight="4:4" >
+<mat-grid-tile *ngFor="let dat of dataForms" [colspan]="4">
     <mat-card class="example-card">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>
-          <b>namesgeo</b>
+           <mat-chip color="accent" selected="true"> <b>Namesgeo</b></mat-chip>
         </mat-card-title>
         <mat-card-subtitle>
-          <b>{{dat.date}}</b>
+            <mat-chip><b>{{dat.date|date:'dd/MM/yyyy à HH:mm'}}</b></mat-chip>
         </mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        {{dat.subject}}
-      </mat-card-content>
-      <mat-divider></mat-divider>
-      <mat-card-content>
-          {{dat.reccurence}}
+          <b>Reccurence: </b>  {{dat.reccurence}}
         </mat-card-content>
       <mat-card-content>
-        <p [innerHTML]="dat.body">
+        <b>Objet: </b>{{dat.subject}}
+      </mat-card-content>
+      <mat-card-content>
+        <b>Body: </b><p [innerHTML]="dat.body">
             
         </p>
       </mat-card-content>
     </mat-card>
-    </ul>
+</mat-grid-tile>
+</mat-grid-list><br>
+  </mat-card>
     </div>
